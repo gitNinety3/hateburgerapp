@@ -1,0 +1,1151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C2C2C"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <!--//////////////////////////////////////////////////////////////-->
+    <!--                            TITLE                             -->
+    <!--//////////////////////////////////////////////////////////////-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <!--            HATE            -->
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="Hate"
+            android:textColor="#E84848"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <!--            BURGER           -->
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:fontFamily="cursive"
+            android:text="Burger:"
+            android:textColor="#FF9800"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#E84848">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--//////////////////////////////////////////////////////////////-->
+                <!--                        BURGERS CARD                          -->
+                <!--//////////////////////////////////////////////////////////////-->
+                <LinearLayout
+                    android:id="@+id/listview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!--//////////////////////////////////////////////////////////////-->
+                            <!--                            BURGERS                           -->
+                            <!--//////////////////////////////////////////////////////////////-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="#E84848"
+                                        android:orientation="horizontal"
+                                        android:padding="5dp">
+
+                                        <!--            BURGERS IN BLACK            -->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="cursive"
+                                            android:paddingLeft="8dp"
+                                            android:text="Burgers:"
+                                            android:textColor="#2C2C2C"
+                                            android:textSize="25sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:padding="5dp">
+
+                                        <!--            BURGERS IN MUSTARD          -->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="cursive"
+                                            android:paddingLeft="10.5dp"
+                                            android:text="Burgers:"
+                                            android:textColor="#FF9800"
+                                            android:textSize="25sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mainBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!--//////////////////////////////////////////////////////////////-->
+                            <!--                            CONTENT                           -->
+                            <!--//////////////////////////////////////////////////////////////-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:cardCornerRadius="0dp">
+
+                                    <!--    HERE I FIXED THE LAYOUT DISPLAY TO HOLD ALL OF   -->
+                                    <!--    THE CONTENT INSIDE BY CHANGING THE WRAP CONTENT  -->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="#FF9800"
+                                        android:orientation="horizontal"
+                                        android:padding="5dp">
+
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+                                            <!--///////////////////////////////////////////////////////////-->
+                                            <!--//                      RECYCLER GOES HERE               //-->
+                                            <!--///////////////////////////////////////////////////////////-->
+                                            <androidx.recyclerview.widget.RecyclerView
+                                                android:id="@+id/popular_recycler1"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+
+                                            </androidx.recyclerview.widget.RecyclerView>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+
+                <!--//////////////////////////////////////////////////////////////-->
+                <!--                        SIDES CARD                          -->
+                <!--//////////////////////////////////////////////////////////////-->
+                <LinearLayout
+                    android:id="@+id/listview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!--//////////////////////////////////////////////////////////////-->
+                            <!--                             SIDES                            -->
+                            <!--//////////////////////////////////////////////////////////////-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:cardCornerRadius="0dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="#E84848"
+                                        android:orientation="horizontal"
+                                        android:padding="5dp">
+
+                                        <!--            BURGERS IN BLACK            -->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="cursive"
+                                            android:paddingLeft="8dp"
+                                            android:text="Sides:"
+                                            android:textColor="#2C2C2C"
+                                            android:textSize="25sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:padding="5dp">
+
+                                        <!--            BURGERS IN MUSTARD          -->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="cursive"
+                                            android:paddingLeft="10.5dp"
+                                            android:text="Sides:"
+                                            android:textColor="#FF9800"
+                                            android:textSize="25sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mainBox2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!--//////////////////////////////////////////////////////////////-->
+                            <!--                            CONTENT                           -->
+                            <!--//////////////////////////////////////////////////////////////-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:cardCornerRadius="0dp">
+
+                                    <!--    HERE I FIXED THE LAYOUT DISPLAY TO HOLD ALL OF   -->
+                                    <!--    THE CONTENT INSIDE BY CHANGING THE WRAP CONTENT  -->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="#FF9800"
+                                        android:orientation="horizontal"
+                                        android:padding="5dp">
+
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+                                            <!--///////////////////////////////////////////////////////////-->
+                                            <!--//                      RECYCLER GOES HERE               //-->
+                                            <!--///////////////////////////////////////////////////////////-->
+                                            <androidx.recyclerview.widget.RecyclerView
+                                                android:id="@+id/popular_recycler2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+
+                                            </androidx.recyclerview.widget.RecyclerView>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+
+                <!--//////////////////////////////////////////////////////////////-->
+                <!--                        DRINKS CARD                           -->
+                <!--//////////////////////////////////////////////////////////////-->
+                <LinearLayout
+                    android:id="@+id/listview3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!--//////////////////////////////////////////////////////////////-->
+                            <!--                            BURGERS                           -->
+                            <!--//////////////////////////////////////////////////////////////-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:cardCornerRadius="0dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="#E84848"
+                                        android:orientation="horizontal"
+                                        android:padding="5dp">
+
+                                        <!--            BURGERS IN BLACK            -->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="cursive"
+                                            android:paddingLeft="8dp"
+                                            android:text="Drinks:"
+                                            android:textColor="#2C2C2C"
+                                            android:textSize="25sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:padding="5dp">
+
+                                        <!--            BURGERS IN MUSTARD          -->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="cursive"
+                                            android:paddingLeft="10.5dp"
+                                            android:text="Drinks:"
+                                            android:textColor="#FF9800"
+                                            android:textSize="25sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mainBox3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!--//////////////////////////////////////////////////////////////-->
+                            <!--                            CONTENT                           -->
+                            <!--//////////////////////////////////////////////////////////////-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:cardCornerRadius="0dp">
+
+                                    <!--    HERE I FIXED THE LAYOUT DISPLAY TO HOLD ALL OF   -->
+                                    <!--    THE CONTENT INSIDE BY CHANGING THE WRAP CONTENT  -->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="#FF9800"
+                                        android:orientation="horizontal"
+                                        android:padding="5dp">
+
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+                                            <!--///////////////////////////////////////////////////////////-->
+                                            <!--//                      RECYCLER GOES HERE               //-->
+                                            <!--///////////////////////////////////////////////////////////-->
+                                            <androidx.recyclerview.widget.RecyclerView
+                                                android:id="@+id/popular_recycler3"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+
+                                            </androidx.recyclerview.widget.RecyclerView>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+
+                <!--//////////////////////////////////////////////////////////////-->
+                <!--                        SAUCES CARD                           -->
+                <!--//////////////////////////////////////////////////////////////-->
+                <LinearLayout
+                    android:id="@+id/listview4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!--//////////////////////////////////////////////////////////////-->
+                            <!--                            BURGERS                           -->
+                            <!--//////////////////////////////////////////////////////////////-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:cardCornerRadius="0dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="#E84848"
+                                        android:orientation="horizontal"
+                                        android:padding="5dp">
+
+                                        <!--            BURGERS IN BLACK            -->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="cursive"
+                                            android:paddingLeft="8dp"
+                                            android:text="Sauces:"
+                                            android:textColor="#2C2C2C"
+                                            android:textSize="25sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:padding="5dp">
+
+                                        <!--            BURGERS IN MUSTARD          -->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="cursive"
+                                            android:paddingLeft="10.5dp"
+                                            android:text="Sauces:"
+                                            android:textColor="#FF9800"
+                                            android:textSize="25sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mainBox4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!--//////////////////////////////////////////////////////////////-->
+                            <!--                            CONTENT                           -->
+                            <!--//////////////////////////////////////////////////////////////-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:cardCornerRadius="0dp">
+
+                                    <!--    HERE I FIXED THE LAYOUT DISPLAY TO HOLD ALL OF   -->
+                                    <!--    THE CONTENT INSIDE BY CHANGING THE WRAP CONTENT  -->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="#FF9800"
+                                        android:orientation="horizontal"
+                                        android:padding="5dp">
+
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+                                            <!--///////////////////////////////////////////////////////////-->
+                                            <!--//                      RECYCLER GOES HERE               //-->
+                                            <!--///////////////////////////////////////////////////////////-->
+                                            <androidx.recyclerview.widget.RecyclerView
+                                                android:id="@+id/popular_recycler4"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+
+                                            </androidx.recyclerview.widget.RecyclerView>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+
+                <!--//////////////////////////////////////////////////////////////-->
+                <!--                        EXTRAS CARD                           -->
+                <!--//////////////////////////////////////////////////////////////-->
+                <LinearLayout
+                    android:id="@+id/listview5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!--//////////////////////////////////////////////////////////////-->
+                            <!--                            BURGERS                           -->
+                            <!--//////////////////////////////////////////////////////////////-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:cardCornerRadius="0dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="#E84848"
+                                        android:orientation="horizontal"
+                                        android:padding="5dp">
+
+                                        <!--            BURGERS IN BLACK            -->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="cursive"
+                                            android:paddingLeft="8dp"
+                                            android:text="Extras:"
+                                            android:textColor="#2C2C2C"
+                                            android:textSize="25sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:padding="5dp">
+
+                                        <!--            BURGERS IN MUSTARD          -->
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="cursive"
+                                            android:paddingLeft="10.5dp"
+                                            android:text="Extras:"
+                                            android:textColor="#FF9800"
+                                            android:textSize="25sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mainBox5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!--//////////////////////////////////////////////////////////////-->
+                            <!--                            CONTENT                           -->
+                            <!--//////////////////////////////////////////////////////////////-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:cardCornerRadius="0dp">
+
+                                    <!--    HERE I FIXED THE LAYOUT DISPLAY TO HOLD ALL OF   -->
+                                    <!--    THE CONTENT INSIDE BY CHANGING THE WRAP CONTENT  -->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="#FF9800"
+                                        android:orientation="horizontal"
+                                        android:padding="5dp">
+
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+                                            <!--///////////////////////////////////////////////////////////-->
+                                            <!--//                      RECYCLER GOES HERE               //-->
+                                            <!--///////////////////////////////////////////////////////////-->
+                                            <androidx.recyclerview.widget.RecyclerView
+                                                android:id="@+id/popular_recycler5"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+
+                                            </androidx.recyclerview.widget.RecyclerView>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <!--//////////////////////////////////////////////////////////////-->
+                <!--                        YOUR ORDER                            -->
+                <!--//////////////////////////////////////////////////////////////-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#E84848"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <!--            BURGERS IN BLACK            -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="cursive"
+                                android:paddingLeft="8dp"
+                                android:text="Your Order:"
+                                android:textColor="#2C2C2C"
+                                android:textSize="25sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <!--            BURGERS IN MUSTARD          -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="cursive"
+                                android:paddingLeft="10.5dp"
+                                android:text="Your Order:"
+                                android:textColor="#FF9800"
+                                android:textSize="25sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <!--//////////////////////////////////////////////////////////////-->
+                        <!--                       BURGER SUMMARY                         -->
+                        <!--//////////////////////////////////////////////////////////////-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#E84848"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <!--            BURGERS IN BLACK            -->
+                            <TextView
+                                android:id="@+id/burgersDisplay1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="cursive"
+                                android:paddingLeft="40dp"
+                                android:text="Burgers:"
+                                android:textColor="#2C2C2C"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <!--            BURGERS IN MUSTARD          -->
+                            <TextView
+                                android:id="@+id/burgersDisplay2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="cursive"
+                                android:paddingLeft="42.5dp"
+                                android:text="Burgers:"
+                                android:textColor="#FF9800"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <!--//////////////////////////////////////////////////////////////-->
+                        <!--                        SIDES SUMMARY                         -->
+                        <!--//////////////////////////////////////////////////////////////-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#E84848"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <!--            BURGERS IN BLACK            -->
+                            <TextView
+                                android:id="@+id/sidesDisplay1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="cursive"
+                                android:paddingLeft="40dp"
+                                android:text="Sides:"
+                                android:textColor="#2C2C2C"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <!--            BURGERS IN MUSTARD          -->
+                            <TextView
+                                android:id="@+id/sidesDisplay2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="cursive"
+                                android:paddingLeft="42.5dp"
+                                android:text="Sides:"
+                                android:textColor="#FF9800"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <!--//////////////////////////////////////////////////////////////-->
+                        <!--                        DRINKS SUMMARY                        -->
+                        <!--//////////////////////////////////////////////////////////////-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#E84848"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <!--            BURGERS IN BLACK            -->
+                            <TextView
+                                android:id="@+id/drinksDisplay1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="cursive"
+                                android:paddingLeft="40dp"
+                                android:text="Drinks:"
+                                android:textColor="#2C2C2C"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <!--            BURGERS IN MUSTARD          -->
+                            <TextView
+                                android:id="@+id/drinksDisplay2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="cursive"
+                                android:paddingLeft="42.5dp"
+                                android:text="Drinks:"
+                                android:textColor="#FF9800"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <!--//////////////////////////////////////////////////////////////-->
+                        <!--                        SAUCES SUMMARY                        -->
+                        <!--//////////////////////////////////////////////////////////////-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#E84848"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <!--            BURGERS IN BLACK            -->
+                            <TextView
+                                android:id="@+id/saucesDisplay1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="cursive"
+                                android:paddingLeft="40dp"
+                                android:text="Sauces:"
+                                android:textColor="#2C2C2C"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <!--            BURGERS IN MUSTARD          -->
+                            <TextView
+                                android:id="@+id/saucesDisplay2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="cursive"
+                                android:paddingLeft="42.5dp"
+                                android:text="Sauces:"
+                                android:textColor="#FF9800"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <!--//////////////////////////////////////////////////////////////-->
+                        <!--                        EXTRAS SUMMARY                        -->
+                        <!--//////////////////////////////////////////////////////////////-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#E84848"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <!--            BURGERS IN BLACK            -->
+                            <TextView
+                                android:id="@+id/extrasDisplay1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="cursive"
+                                android:paddingLeft="40dp"
+                                android:text="Extras:"
+                                android:textColor="#2C2C2C"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <!--            BURGERS IN MUSTARD          -->
+                            <TextView
+                                android:id="@+id/extrasDisplay2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="cursive"
+                                android:paddingLeft="42.5dp"
+                                android:text="Extras:"
+                                android:textColor="#FF9800"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+
+                    <Button
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="SUBMIT ORDER (:"
+                        android:textColor="#2C2C2C"
+                        app:backgroundTint="#FF9800">
+
+
+                    </Button>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+

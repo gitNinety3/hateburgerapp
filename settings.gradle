@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "Hate Burger 4.0"

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Hate Burger 4.0</string>
+    <string name="name">Name</string>
+    <string name="price">Price</string>
+    <string name="description">Description:</string>
+    <string name="increment">+</string>
+    <string name="decrement">-</string>
+</resources>
